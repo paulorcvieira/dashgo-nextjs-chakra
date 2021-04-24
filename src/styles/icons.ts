@@ -6,4 +6,6 @@ export {
   RiContactsLine,
   RiInputMethodLine,
   RiGitMergeLine,
+  RiAddLine,
+  RiPencilLine,
 } from 'react-icons/ri'
