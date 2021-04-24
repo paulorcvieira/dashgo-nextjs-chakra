@@ -24,7 +24,7 @@ export default function Header() {
         w="64"
       >
         dashgo
-        <Text as="span" m="1" color="pink.500">_</Text>
+        <Text as="span" m="-0.3" color="pink.500">_</Text>
       </Text>
 
       <Flex
