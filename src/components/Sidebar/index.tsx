@@ -25,7 +25,7 @@ export default function Sidebar() {
     return (
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay>
-          <DrawerContent bg="gray.800" p="4">
+          <DrawerContent bg="gray.800" p="3">
             <DrawerCloseButton mt="6" />
             <DrawerHeader>Navegação</DrawerHeader>
 
@@ -39,7 +39,7 @@ export default function Sidebar() {
   }
 
   return (
-    <Box as="aside" w="64" mr="8">
+    <Box as="aside" w="50" mr="8">
       <SidebarNav />
     </Box>
   );

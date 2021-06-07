@@ -40,17 +40,6 @@ export default function Header() {
 
       <Logo />
 
-      { isWideVersion && (
-        <IconButton
-          aria-label="Close navigation"
-          icon={<Icon as={RiCloseLine} />}
-          fontSize="24"
-          variant="unstyled"
-          onClick={onOpen}
-          mr="2"
-        />
-      )}
-
       { isWideVersion && <SearchBox /> }
 
       <Flex align="center" ml="auto">

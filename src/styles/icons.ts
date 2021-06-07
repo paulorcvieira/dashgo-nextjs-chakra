@@ -10,4 +10,10 @@ export {
   RiPencilLine,
   RiMenuLine,
   RiCloseLine,
+  RiBankLine,
+  RiHomeGearLine,
+  RiBookReadLine,
+  RiBook3Line,
+  RiDraftLine,
+  RiFileUserLine,
 } from 'react-icons/ri'

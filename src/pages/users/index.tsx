@@ -53,7 +53,7 @@ export default function UserList() {
 
         <Box flex='1' borderRadius={8} bg='gray.800' p='8'>
           <Flex mb='8' justify='space-between' align='center'>
-            <Heading size='lg' fontWeight='normal'>
+            <Heading size='md' fontWeight='normal'>
               Usuários
               {!isLoading && isFetching && <Spinner size='sm' color='gray=500' ml='4' />}
             </Heading>
@@ -75,29 +75,31 @@ export default function UserList() {
                 <Thead>
                   <Tr>
                     <Th px={['4', '4', '6']} color='gray.300' width='8'>
-                      <Checkbox colorScheme='pink' />
+                      Pasta
                     </Th>
                     <Th>Usuário</Th>
+                    {isWideVersion && <Th>Email</Th>}
                     {isWideVersion && <Th>Data de cadastro</Th>}
                   </Tr>
                 </Thead>
 
                 <Tbody>
-                  {data.users.map((user) => {
+                  {data.users.map((user, index) => {
                     return (
                       <Tr key={user.id}>
                         <Td px={['4', '4', '6']}>
-                          <Checkbox colorScheme='pink' />
+                          {index + 1}
                         </Td>
                         <Td>
                           <Box>
                             <Link color='purple.400' onMouseEnter={() => handlePrefetchUser(user.id)}>
-                              <Text fontWeight='bold'>{user.name}</Text>
+                              <Text fontSize={14} fontWeight='bold'>{user.name}</Text>
                             </Link>
-                            <Text fontSize='sm' color='gray.300'>{user.email}</Text>
+                            <Text fontSize={12} color='gray.300'>CPF: {user.cpf}</Text>
                           </Box>
                         </Td>
-                        {isWideVersion && <Td>{user.created_at}</Td>}
+                        {isWideVersion && <Td fontSize={14}>{user.email}</Td>}
+                        {isWideVersion && <Td fontSize={14}>{user.created_at}</Td>}
                       </Tr>
                     )
                   })}

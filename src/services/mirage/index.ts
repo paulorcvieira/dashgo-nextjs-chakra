@@ -1,9 +1,10 @@
 import { createServer, Factory, Model, Response, ActiveModelSerializer } from 'miragejs'
-import faker from 'faker'
+import faker from 'faker-br'
 
 type User = {
   name: string;
   email: string;
+  cpf: string;
   created_at: string;
 };
 
@@ -24,6 +25,9 @@ export function makeServer() {
         },
         email() {
           return faker.internet.email().toLowerCase();
+        },
+        cpf() {
+          return (faker.br.cpf()).replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$2-$4");
         },
         createdAt() {
           return faker.date.recent(10);
