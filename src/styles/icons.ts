@@ -8,4 +8,6 @@ export {
   RiGitMergeLine,
   RiAddLine,
   RiPencilLine,
+  RiMenuLine,
+  RiCloseLine,
 } from 'react-icons/ri'
